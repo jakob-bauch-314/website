@@ -19,9 +19,18 @@ $(document).ready(function(){
     })
   });
 
+  $(".skeleton").each(function(index, element){
+    $(element).attr("src", "images/skeleton.gif");
+    $(element).on("click", function(){
+      //$(".baby_container").append("<img class='baby' src='images/baby.gif'>");
+    })
+  })
+
+  /*
   $(".panel").each(function(index, element){
     $(element).on("click", function(){
       new Audio("music/select.mp3").play();
     })
   })
+  */
 })

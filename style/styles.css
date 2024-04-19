@@ -1,7 +1,13 @@
 
-body{
-    background-image:url("../images/starfield.gif");
+*{
+    cursor: url("../cursors/spiderman.png") 0 33, pointer;
+}
+
+html{
+    background-image: url("../images/starfield.gif");
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .menu-items{
@@ -56,11 +62,6 @@ body{
     animation: rainbow 50s linear infinite;
 }
 
-.trumpet{
-    width: 100%;
-    height: auto;
-}
-
 .nyan-cat{
     position: relative;
     right: 0;
@@ -80,11 +81,28 @@ body{
     width: 100vw;
     height: 100%;
     transform:translate(-100vw, 0);
-    display:inline-block ;
+    display:inline-block;
 }
 
 @keyframes rainbow{
     100%{
         background-position: 300em, 0em;
     }
+}
+
+a{
+    color: yellow;
+}
+
+.contents{
+    width: 99%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: yellow;
+}
+
+table.contents > tbody > tr > td{
+    width: 20%;
 }
