@@ -1,0 +1,108 @@
+
+*{
+    cursor: url("../cursors/spiderman.png") 0 33, pointer;
+}
+
+html{
+    background-image: url("../images/starfield.gif");
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-items{
+    width: 99%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-item{
+    width: 10%;
+    height: 100%;
+    display:inline-block;
+    margin-left:5px;
+    margin-right:5px;
+    background-color: crimson;
+    color: yellow;
+    font-size: 25px;
+}
+
+.header-box{
+    width: 99%;
+    background-color: black;
+    margin: 10px;
+}
+
+.header{
+    font-weight: 1000;
+    font-size: 60px;
+}
+
+.rainbow-text{
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        darkviolet,
+        red,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        darkviolet,
+        red
+    );
+    -webkit-background-clip: text;
+            background-clip: text;
+    animation: rainbow 50s linear infinite;
+}
+
+.nyan-cat{
+    position: relative;
+    right: 0;
+    height: 8vw;
+    width: 15vw;
+    margin-left: auto;
+    background-image: url("../imageS/nyan-cat.gif");
+    background-repeat:no-repeat;
+    background-size:contain;
+}
+
+.nyan-cat::before {
+    content: '';
+    position: absolute;
+    background-image: url("../imageS/rainbow.gif");
+    background-size:contain;
+    width: 100vw;
+    height: 100%;
+    transform:translate(-100vw, 0);
+    display:inline-block;
+}
+
+@keyframes rainbow{
+    100%{
+        background-position: 300em, 0em;
+    }
+}
+
+a{
+    color: yellow;
+}
+
+.contents{
+    width: 99%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: yellow;
+}
+
+table.contents > tbody > tr > td{
+    width: 20%;
+}
