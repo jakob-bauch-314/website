@@ -1,0 +1,9 @@
+[submodule "snake"]
+	path = snake
+	url = https://github.com/jakob-bauch-314/snake
+[submodule "projects/snake"]
+	path = projects/snake
+	url = https://github.com/jakob-bauch-314/snake
+[submodule "projects/a_star"]
+	path = projects/a_star
+	url = https://github.com/jakob-bauch-314/a_star
