@@ -1,13 +1,28 @@
 
 states = []
 
+// get project name from url
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const project = urlParams.get('project')
+const project_path = `projects/${project}`
+const project_index_path = `${project_path}/index.html`
+const project_readme_path = `${project_path}/README.md`
+const project_name = project.split('_').slice(0,-1).join(' ')
 
+// parse readme
+
+
+console.log(project_readme_path)
+
+// create html
 $(document).ready(function(){
-    
-    $("#title").append(project);
-    $("#project").attr("src", `projects/${project}/index.html`);
 
+fetch(project_readme_path)
+  .then(response => response.text())
+  .then(markdown => {$("#readme").append(marked.parse(markdown));})
+  .catch(error => console.error('Error loading Markdown:', error));
+
+  $("#title").append(project_name);
+  $("#project").attr("src", project_index_path);
 })

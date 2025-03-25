@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/script.js"></script>
     <script src="scripts/script.js"></script>
@@ -15,13 +16,19 @@
 
     <embed class="invisible-music" src="music/nyan_cat.mp3" loop="true" autostart="true" volume=5>
 
-    <div class="green section-seperator"></div>
+    <div class="green horizontal-section-seperator"></div>
 
     <header class="blue-stars">
         <table>
             <tr>
                 <td>
+                    <a href="../index.html"><div class="back button">⏴</div></a>
+                </td>
+                <td>
                     <div id="title" class="head-line rainbow-text"></div>
+                </td>
+                <td>
+                    <a href="../index.html"><div class="back button">&lt-</div></a>
                 </td>
             </tr>
         </table>
@@ -29,13 +36,13 @@
         <div class="flames top"></div>
     </header>
 
-    <div class="green section-seperator"></div>
+    <div class="green horizontal-section-seperator"></div>
 
     <main class="nebula">
-        <iframe id="project"></iframe>
+        <iframe id="project"></iframe><div class="green vertical-section-seperator"></div><div id="readme-wrapper"><div id="readme"></div></div>
     </main>
 
-    <div class="green section-seperator"></div>
+    <div class="green horizontal-section-seperator"></div>
 
 </body>
 </html>
