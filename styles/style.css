@@ -1,12 +1,13 @@
+/* ===== Imports ===== */
 
 @import url('https://fonts.cdnfonts.com/css/comic-sans');
 
-:root {
-    --frame_width: 50px;
-}
+/* ===== Base Styles ===== */
 
-embed{
-    display: none;
+:root {
+    --frame-width: 30px;
+    --light-text-color: yellow;
+    --dark-text-color: black;
 }
 
 *{
@@ -26,10 +27,14 @@ html{
 
 /*header section*/
 
+embed{
+    display: none;
+}
+
 .header-box{
     position: relative;
     width: 100%;
-    height: calc(40vh - 1.5 * var(--frame_width));
+    height: calc(40vh - 1.5 * var(--frame-width));
     background-image: url("../images/blue_stars.png");
     background-repeat: repeat;
 }
@@ -39,7 +44,7 @@ html{
 .contents{
     position: relative;
     width: 100%;
-    height: calc(60vh - 1.5 * var(--frame_width));
+    height: calc(60vh - 1.5 * var(--frame-width));
     margin-left:auto;
     margin-right:auto;
     color: yellow;
@@ -98,28 +103,6 @@ html{
     animation: rainbow 50s linear infinite;
 }
 
-.nyan-cat{
-    position: relative;
-    right: 0;
-    height: 8vw;
-    width: 15vw;
-    margin-left: auto;
-    background-image: url("../imageS/nyan-cat.gif");
-    background-repeat:no-repeat;
-    background-size:contain;
-}
-
-.nyan-cat::before {
-    content: '';
-    position: absolute;
-    background-image: url("../imageS/rainbow.gif");
-    background-size:contain;
-    width: 100vw;
-    height: 100%;
-    transform:translate(-100vw, 0);
-    display:inline-block;
-}
-
 @keyframes rainbow{
     100%{
         background-position: 300em, 0em;
@@ -150,7 +133,7 @@ a{
     width: 100%;
     height: 300px;
     background-image: url("../images/skeleton.gif");
-    background-size: 250px 500px;
+    background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
@@ -161,48 +144,49 @@ a{
     background-image: url("../images/flames.gif");
     background-position: 100% 100%;
     background-repeat: repeat-x;
+    background-size: auto calc(var(--frame-width)*3)
 }
 
 .wall{
     background-image: url("../images/wall.png");
     background-position: 100% 100%;
     background-repeat: repeat-x;
-    background-size: auto var(--frame_width)
+    background-size: auto var(--frame-width);
 }
 
 .bricks{
     background-image: url("../images/bricks.png");
     background-position: 100% 100%;
     background-repeat: repeat-x;
-    background-size: auto var(--frame_width)
+    background-size: auto var(--frame-width)
 }
 
 .violet{
     background-image: url("../images/violet.png");
     background-position: 100% 100%;
     background-repeat: repeat-x;
-    background-size: auto var(--frame_width)
+    background-size: auto var(--frame-width)
 }
 
-.red_bricks{
+.red-bricks{
     background-image: url("../images/red_bricks.png");
     background-position: 100% 100%;
     background-repeat: repeat;
-    background-size: auto var(--frame_width)
+    background-size: auto var(--frame-width)
 }
 
 .greek{
     background-image: url("../images/greek.png");
     background-position: 100% 100%;
     background-repeat: repeat;
-    background-size: auto var(--frame_width)
+    background-size: auto var(--frame-width)
 }
 
 /*frame orientations*/
 
 .top{
     width: 100%;
-    height: var(--frame_width);
+    height: var(--frame-width);
     transform: scale(-1, -1);
     top: 0;
     position: absolute;
@@ -210,7 +194,7 @@ a{
 
 .bottom{
     width: 100%;
-    height: var(--frame_width);
+    height: var(--frame-width);
     transform: scale(1, 1);
     bottom: 0;
     position: absolute;
@@ -218,7 +202,7 @@ a{
 
 .right{
     height: 100%;
-    width: var(--frame_width);
+    width: var(--frame-width);
     transform: scale(1, 1);
     right: 0;
     position: absolute;
@@ -226,15 +210,15 @@ a{
 
 .left{
     height: 100%;
-    width: var(--frame_width);
+    width: var(--frame-width);
     transform: scale(1, 1);
     left: 0;
     position: absolute;
 }
 
-.seperator{
+.section-seperator{
     width: 100%;
-    height: var(--frame_width);
+    height: var(--frame-width);
 }
 
 .trumpet{
