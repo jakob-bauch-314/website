@@ -11,6 +11,9 @@
     --decorator-width: 50px;
     --light-text-color: yellow;
     --dark-text-color: black;
+    --header-height:  calc(40vh - 1.5 * var(--seperator-width));
+    --main-height: calc(60vh - 1.5 * var(--seperator-width));
+    --project-button-height: calc(var(--main-height) / 20);
 }
 
 *{
@@ -61,7 +64,7 @@ body{
 }
 
 .trumpet{
-    height: 100%;
+    height: min(20vw, calc(var(--header-height) * 0.7));
     width: auto;
 }
 
@@ -74,7 +77,7 @@ body{
 header{
     position: relative;
     width: 100%;
-    height: calc(40vh - 1.5 * var(--seperator-width));
+    height: var(--header-height);
     background-repeat: repeat;
     text-align: center;
 }
@@ -96,7 +99,7 @@ nav{
 main{
     position: relative;
     width: 100%;
-    height: calc(60vh - 1.5 * var(--seperator-width));
+    height: var(--main-height);
     margin-left:auto;
     margin-right:auto;
 }
@@ -112,7 +115,8 @@ main > table > tbody > tr > td{
 
 .head-line{
     font-weight: 1000;
-    font-size: 60px;
+    /*font-size: 60px;*/
+    font-size: min(5vw, 7.5vh);
     font-family: 'Epson Pixeled', sans-serif;
 }
 
@@ -153,6 +157,7 @@ main > table > tbody > tr > td{
     background-repeat: repeat;
     text-decoration: none;
     outline: 5px outset;
+    box-sizing: border-box;
 }
 
 a{
@@ -160,12 +165,14 @@ a{
 }
 
 .project.button{
-    height: 30px;
-    line-height: 30px;
-    width: 200px;
+    height: var(--project-button-height);
+    line-height: var(--project-button-height);
+    width: 10vw;
     margin: auto;
     text-align: center;
-    font-family:'Times New Roman', Times, serif
+    font-family:'Times New Roman', Times, serif;
+    font-size: min(1.5vw, 2vh);
+    outline-width: calc(var(--project-button-height) / 5);
 }
 
 /* ===== Patterns ===== */

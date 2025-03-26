@@ -1,15 +1,14 @@
 
+:root{
+    --header-height:  calc(25vh - 1.5 * var(--seperator-width)) !important;
+    --main-height: calc(75vh - 1.5 * var(--seperator-width)) !important;
+    --button-size: min(calc(var(--header-height) * 0.25), 2vw);
+}
+
 /* ===== Header Section ===== */
 
 .invisible-music{
     display: none;
-}
-
-header{
-    position: relative;
-    width: 100%;
-    height: calc(25vh - 1.5 * var(--seperator-width)) !important;
-    background-repeat: repeat;
 }
 
 .headline{
@@ -21,14 +20,6 @@ header{
 nav{color: var(--light-text-color);}
 
 /* ===== Main Section ===== */
-
-main{
-    position: relative;
-    width: 100%;
-    height: calc(75vh - 1.5 * var(--seperator-width)) !important;
-    margin-left:auto;
-    margin-right:auto;
-}
 
 main > table{
     width: 100%;
@@ -54,13 +45,13 @@ main > table > tbody > tr > td{
 
 .back.button{
     position: relative;
-    width: 40px;
-    height: 40px;
-    font-size: 40px;
-    line-height: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-    display: inline-block;
+    font-size: calc(var(--button-size) * 0.9);
+    line-height: var(--button-size);
+    outline-width: calc(var(--button-size) / 5);
+    width: var(--button-size);
+    height: var(--button-size);
+    margin-left: calc(var(--button-size) * 0.5);
+    margin-right: calc(var(--button-size) * 0.5);
     float: left;
 
     /* center vertically */
