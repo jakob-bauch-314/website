@@ -25,6 +25,7 @@ fetch(project_readme_path)
   .catch(error => console.error('Error loading Markdown:', error));
 
   $("#title").append(project_name);
+  $("title").append(project_name);
   $("#project").attr("src", project_index_path);
   document.getElementById('project').src += '';
 })
