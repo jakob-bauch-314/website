@@ -1,6 +1,8 @@
 /* ===== Imports ===== */
 
 @import url('https://fonts.cdnfonts.com/css/comic-sans');
+@import url('https://fonts.cdnfonts.com/css/the-death-dog');
+@import url('https://fonts.cdnfonts.com/css/epson-pixeled');
 
 /* ===== Base Styles ===== */
 
@@ -13,7 +15,6 @@
 
 *{
     cursor: url("../cursors/spiderman.png") 0 33, pointer;
-    font-family: 'Comic Sans', cursive;
     /*text-align: center;*/
     color: inherit;
 }
@@ -112,6 +113,7 @@ main > table > tbody > tr > td{
 .head-line{
     font-weight: 1000;
     font-size: 60px;
+    font-family: 'Epson Pixeled', sans-serif;
 }
 
 .rainbow-text{
